@@ -1,6 +1,6 @@
 {
   "name": "@zswang/react-drawer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Drawer UI component for React",
   "keywords": [
     "react",
@@ -27,15 +27,16 @@
     "dist"
   ],
   "license": "MIT",
-  "main": "./lib/index.js",
-  "module": "./es/index",
+  "main": "./lib/Drawer",
+  "typings": "./lib/Drawer.d.ts",
+  "module": "./es/Drawer",
   "style": "./assets/index.css",
   "config": {
     "port": 8005,
     "entry": {
       "react-drawer": [
         "./assets/index.less",
-        "./src/index.js"
+        "./src/Drawer.tsx"
       ]
     }
   },

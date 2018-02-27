@@ -41,7 +41,7 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
   /**
    * 容器元素
    */
-  private drawerElement: HTMLDivElement | null;
+  private drawerElement: HTMLDivElement;
 
   constructor(props: IDrawerProps, context?: any) {
     super(props, context);
@@ -122,7 +122,7 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
         ) : null}
         <div
           className={`${prefixCls}-content ${prefixCls}-${position}`}
-          ref={element => (this.drawerElement = element)}
+          ref={element => (this.drawerElement = element as HTMLDivElement)}
         >
           {children}
         </div>
