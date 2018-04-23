@@ -1,6 +1,3 @@
-/* eslint react/no-multi-comp: 0, max-len: 0 */
-import '@zswang/react-drawer/assets/index.less';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Drawer from '@zswang/react-drawer';

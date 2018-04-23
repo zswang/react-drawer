@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Drawer.less';
 
 export interface IDrawerProps {
   /**
@@ -13,6 +14,8 @@ export interface IDrawerProps {
    * 出现方位
    */
   position?: 'left' | 'right';
+  onOpen?: Function;
+  onClose?: Function;
 }
 
 export interface IDrawerState {
@@ -25,7 +28,10 @@ export interface IDrawerState {
 /**
  * 抽屉工具
  */
-export default class Drawer extends React.Component<IDrawerProps, any> {
+export default class Drawer extends React.Component<
+  IDrawerProps,
+  IDrawerState
+> {
   static displayName = '@zswang/react-drawer';
 
   static defaultProps: IDrawerProps = {
@@ -92,6 +98,9 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
     this.setState({
       status: 'opening',
     });
+    if (this.props.onOpen) {
+      this.props.onOpen();
+    }
   }
 
   /**
@@ -104,6 +113,9 @@ export default class Drawer extends React.Component<IDrawerProps, any> {
     this.setState({
       status: 'closing',
     });
+    if (this.props.onClose) {
+      this.props.onClose();
+    }
   }
 
   render() {

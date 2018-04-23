@@ -1,6 +1,6 @@
 {
   "name": "@zswang/react-drawer",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Drawer UI component for React",
   "keywords": [
     "react",
@@ -21,7 +21,6 @@
     "url": "http://github.com/zswang/react-drawer/issues"
   },
   "files": [
-    "assets/*.css",
     "lib",
     "es",
     "dist"
@@ -30,12 +29,10 @@
   "main": "./lib/Drawer",
   "typings": "./lib/Drawer.d.ts",
   "module": "./es/Drawer",
-  "style": "./assets/index.css",
   "config": {
-    "port": 8005,
+    "port": 8006,
     "entry": {
       "react-drawer": [
-        "./assets/index.less",
         "./src/Drawer.tsx"
       ]
     }
