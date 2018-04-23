@@ -19839,6 +19839,9 @@ var Drawer = function (_React$Component) {
         this.setState({
             status: 'opening'
         });
+        if (this.props.onOpen) {
+            this.props.onOpen();
+        }
     };
     /**
      * 关闭抽屉
