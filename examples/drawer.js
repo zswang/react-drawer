@@ -19855,6 +19855,9 @@ var Drawer = function (_React$Component) {
         this.setState({
             status: 'closing'
         });
+        if (this.props.onClose) {
+            this.props.onClose();
+        }
     };
 
     Drawer.prototype.render = function render() {
